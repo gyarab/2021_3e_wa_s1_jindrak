@@ -1,24 +1,28 @@
+<!DOCTYPE html>
 <html>
     <head>
         <title>Document</title>
+        <script>
+          function run(){
+            const size = 8;
+            var table = document.getElementById("table");
+            var white = true;
+            for(var i = 0; i < size; i++) {
+              white = !white;
+              let tr = document.createElement("tr")
+              table.appendChild(tr);
+              for(var j = 0; j < size; j++) {
+                white = !white;
+                let td = document.createElement("td");
+                td.style = "background-color: " + (white ? "white" : "black") + ";";
+                tr.appendChild(td);
+              }
+            }
+          }
+        </script>
     </head>
-    <body>
-        <table  style="width: 100%; height: 100%">
-            <tr>
-              <td style="background-color: black;"></td>
-              <td></td>
-              <td style="background-color: black;"></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td style="background-color: black;"></td>¨
-              <td></td>
-            </tr>
-            <tr>
-              <td style="background-color: black;"></td>
-              <td></td>
-              <td style="background-color: black;"></td>
-            </tr>
-          </table>
+    <body onload="run()">
+        <table id="table" width="300" height="300" style="border-spacing: 0;">
+        </table>
     </body>
 </html>
