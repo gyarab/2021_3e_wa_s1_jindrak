@@ -3,7 +3,7 @@ import turtle
 
 turtle.bgcolor("black")
 turtle.pensize(2)
-turtle.speed(0)
+turtle.speed(1)
 turtle.color("white")
 
 turtle.forward(100)
