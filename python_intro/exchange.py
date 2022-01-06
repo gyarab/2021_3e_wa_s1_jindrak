@@ -25,4 +25,4 @@ output_value = input_value / rate
 # vystup
 
 print(f"Prevedena castka: {output_value:.2f} {target_currency}")
-#pprint(rates_list)
+#pprint(rates_list)273
