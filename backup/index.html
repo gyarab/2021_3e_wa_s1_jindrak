@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+
+  <head>
+    <title>Larry Tesler</title>
+    <meta charset="UTF-8">
+  </head>
+
+  <body style="font-size: 40px">
+    <h1 style="color: red">Larry Tesler</h1>
+    <ul style="font-weight: bold">
+      <li style="color: pink">pracoval pro Apple, Amazon, PARC a Yahoo</li>
+      <li style="color: blue">naučil se programovat ještě než šel na vysokou školu</li>
+      <li style="color: darkviolet">již během studia na univerzitě pracoval jako programátor</li>
+      <li style="color: cyan">byl proti válce ve Vietnamu</li>
+      <li style="color: #00ff00">spolu s Timem Mottem vyvinul funkci kopírovat a vložit</li>
+    </ul>
+
+    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Larry_Tesler_Smiles_at_Whisper.jpeg" width="480" height="480">
+
+    <script>
+      alert('beware seizures')
+      const colors = ['red', 'green', 'blue', 'pink', 'orange', 'magenta', 'gray', 'yellow', 'white', 'black'];
+      setInterval(
+        function (){
+          document.body.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+        }, 10);
+    </script>
+  </body>
+
+</html>

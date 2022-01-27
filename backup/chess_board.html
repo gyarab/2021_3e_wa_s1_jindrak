@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ChessBoard</title>
+</head>
+<body style="margin: 0; overflow: hidden">
+  <canvas></canvas>
+  <script>
+      let canvas = document.querySelector('canvas');
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+
+      let ctx = canvas.getContext('2d');
+
+      let size = window.innerHeight / 8;
+
+      for (let i = 0; i < 8; i++) {
+          for (let j = 0; j < 8; j++) {
+              if (i % 2 != j % 2){
+                  ctx.fillRect(i * size, j * size, size, size);
+              }
+          }
+      }
+  </script>
+</body>
+</html>
