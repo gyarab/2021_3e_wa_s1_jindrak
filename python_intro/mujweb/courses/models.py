@@ -9,3 +9,4 @@ class Teacher(models.Model):
 class Course(models.Model):
     title = models.CharField(max_length=255)
     start = models.DateTimeField
+    price = models.IntegerField(default=200)
