@@ -1,0 +1,192 @@
+- model: gaflix.category
+  pk: 2
+  fields:
+    title: Drama
+    movies:
+    - 1
+    - 2
+    - 3
+    - 4
+    - 6
+- model: gaflix.category
+  pk: 3
+  fields:
+    title: Krimi
+    movies:
+    - 1
+    - 5
+    - 6
+- model: gaflix.category
+  pk: 4
+  fields:
+    title: Komedie
+    movies:
+    - 2
+- model: gaflix.category
+  pk: 5
+  fields:
+    title: Mysteriózní
+    movies:
+    - 3
+- model: gaflix.category
+  pk: 6
+  fields:
+    title: Thriller
+    movies:
+    - 5
+- model: gaflix.movie
+  pk: 1
+  fields:
+    title: Vykoupení z věznice Shawshank
+    description: ''
+    director: 10
+    actors:
+    - 5
+    categories:
+    - 2
+    - 3
+- model: gaflix.movie
+  pk: 2
+  fields:
+    title: Forrest Gump
+    description: ''
+    director: 11
+    actors:
+    - 6
+    categories:
+    - 2
+    - 4
+- model: gaflix.movie
+  pk: 3
+  fields:
+    title: Zelená míle
+    description: ''
+    director: 10
+    actors:
+    - 6
+    categories:
+    - 2
+    - 5
+- model: gaflix.movie
+  pk: 4
+  fields:
+    title: Přelet nad Kukaččím hnízdem
+    description: ''
+    director: 12
+    actors:
+    - 8
+    categories:
+    - 2
+- model: gaflix.movie
+  pk: 5
+  fields:
+    title: Sedm
+    description: ''
+    director: 13
+    actors:
+    - 5
+    - 7
+    categories:
+    - 3
+    - 6
+- model: gaflix.movie
+  pk: 6
+  fields:
+    title: Kmotr
+    description: ''
+    director: 14
+    actors:
+    - 9
+    categories:
+    - 2
+    - 3
+- model: gaflix.person
+  pk: 5
+  fields:
+    name: Morgan Freeman
+    description: Získal Oscara.
+    birth_date: 1937-06-01
+- model: gaflix.person
+  pk: 6
+  fields:
+    name: Tom Hanks
+    description: Taky získal Oscara.
+    birth_date: 1956-07-09
+- model: gaflix.person
+  pk: 7
+  fields:
+    name: Brad Pitt
+    description: Nevím, jestli dostal Oscara.
+    birth_date: 1963-12-18
+- model: gaflix.person
+  pk: 8
+  fields:
+    name: Jack Nicholson
+    description: Má rád Putina.
+    birth_date: 1937-04-22
+- model: gaflix.person
+  pk: 9
+  fields:
+    name: Al Pacino
+    description: Má rád černou barvu.
+    birth_date: 1940-04-25
+- model: gaflix.person
+  pk: 10
+  fields:
+    name: Frank Darabont
+    description: ''
+    birth_date: 1959-01-28
+- model: gaflix.person
+  pk: 11
+  fields:
+    name: Robert Zemeckis
+    description: ''
+    birth_date: 1951-05-14
+- model: gaflix.person
+  pk: 12
+  fields:
+    name: Miloš Forman
+    description: ''
+    birth_date: 1932-02-18
+- model: gaflix.person
+  pk: 13
+  fields:
+    name: David Fincher
+    description: ''
+    birth_date: 1962-08-28
+- model: gaflix.person
+  pk: 14
+  fields:
+    name: Francis Ford Coppola
+    description: ''
+    birth_date: 1939-04-07
+- model: gaflix.actor
+  pk: 5
+  fields: {}
+- model: gaflix.actor
+  pk: 6
+  fields: {}
+- model: gaflix.actor
+  pk: 7
+  fields: {}
+- model: gaflix.actor
+  pk: 8
+  fields: {}
+- model: gaflix.actor
+  pk: 9
+  fields: {}
+- model: gaflix.director
+  pk: 10
+  fields: {}
+- model: gaflix.director
+  pk: 11
+  fields: {}
+- model: gaflix.director
+  pk: 12
+  fields: {}
+- model: gaflix.director
+  pk: 13
+  fields: {}
+- model: gaflix.director
+  pk: 14
+  fields: {}
