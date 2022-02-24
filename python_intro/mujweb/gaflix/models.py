@@ -29,6 +29,8 @@ class Person(models.Model):
         return self.name
 
 class Actor(Person):
-    pass
+    class Meta:
+        ordering = ['birth_date']
+    #pass
 class Director(Person):
     pass
