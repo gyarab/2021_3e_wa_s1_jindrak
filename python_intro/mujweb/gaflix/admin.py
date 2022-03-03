@@ -5,8 +5,12 @@ from .models import Movie, Actor, Director, Category
 # Register your models here.
 
 class ActorAdmin(admin.ModelAdmin):
-    list_display = ['name', 'birth_date']
+    list_display = ['pk', 'name', 'birth_date', 'sex']
+    list_display_links = ['pk', 'name']
     search_fields = ['name']
+    list_filter = ['sex', 'birth_date']
+    list_editable = ['birth_date', 'sex']
+    date_hierarchy = 'birth_date'
 
 admin.site.register(Movie)
 admin.site.register(Actor, ActorAdmin)

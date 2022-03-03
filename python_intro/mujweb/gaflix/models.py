@@ -21,10 +21,21 @@ class Movie(models.Model):
     def __str__(self):
         return self.title
 
+SEX_MALE = 'male'
+SEX_FEMALE = 'female'
+SEX_OTHER = 'other'
+
+SEX_CHOICES = [
+    [SEX_MALE, 'Muž'],
+    [SEX_FEMALE, 'Žena'],
+    [SEX_OTHER, 'Jiné'],
+]
+
 class Person(models.Model):
     name = models.CharField(max_length=255)
     description = models.TextField(null=True, blank=True)
     birth_date = models.DateField(null=True, blank=True)
+    sex = models.CharField(choices=SEX_CHOICES, max_length=64, default=SEX_MALE)
     def __str__(self):
         return self.name
 

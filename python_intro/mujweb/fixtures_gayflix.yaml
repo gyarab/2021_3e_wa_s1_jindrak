@@ -106,60 +106,70 @@
     name: Morgan Freeman
     description: Získal Oscara.
     birth_date: 1937-06-01
+    sex: male
 - model: gaflix.person
   pk: 6
   fields:
     name: Tom Hanks
     description: Taky získal Oscara.
     birth_date: 1956-07-09
+    sex: male
 - model: gaflix.person
   pk: 7
   fields:
     name: Brad Pitt
     description: Nevím, jestli dostal Oscara.
     birth_date: 1963-12-18
+    sex: male
 - model: gaflix.person
   pk: 8
   fields:
     name: Jack Nicholson
     description: Má rád Putina.
     birth_date: 1937-04-22
+    sex: male
 - model: gaflix.person
   pk: 9
   fields:
     name: Al Pacino
     description: Má rád černou barvu.
     birth_date: 1940-04-25
+    sex: male
 - model: gaflix.person
   pk: 10
   fields:
     name: Frank Darabont
     description: ''
     birth_date: 1959-01-28
+    sex: other
 - model: gaflix.person
   pk: 11
   fields:
     name: Robert Zemeckis
     description: ''
     birth_date: 1951-05-14
+    sex: other
 - model: gaflix.person
   pk: 12
   fields:
     name: Miloš Forman
     description: ''
     birth_date: 1932-02-18
+    sex: other
 - model: gaflix.person
   pk: 13
   fields:
     name: David Fincher
     description: ''
     birth_date: 1962-08-28
+    sex: other
 - model: gaflix.person
   pk: 14
   fields:
     name: Francis Ford Coppola
     description: ''
     birth_date: 1939-04-07
+    sex: other
 - model: gaflix.actor
   pk: 5
   fields: {}
