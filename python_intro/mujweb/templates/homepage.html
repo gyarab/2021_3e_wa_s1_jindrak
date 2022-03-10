@@ -6,7 +6,42 @@
 
 {% block content %}
     <div class="container-fluid">
+        {% for category in categories %}
+            <a href="{% url 'category_detail' category.pk %}" class="btn btn-primary">{{category.title}}</a>
+        {% endfor %}
         <h1>Choose your movie</h1>
-        
+        {% for movie in movies %}
+            <h2>{{movie.title}}</h2>
+            <ul>
+                <li>
+                    ČSFD: {{movie.rating}}%
+                </li>
+                <li>
+                    Režisér:
+                    <ul>
+                        <li>
+                            {{movie.director}} &ndash; {{movie.director.birth_date|date:"j. n. Y"}}
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    Kategorie:
+                    <ul>
+                        {% for category in movie.categories.all %}
+                        <li>{{category.title}}</li>
+                        {% endfor %}
+                    </ul>
+                </li>
+                <li>
+                    Herci:
+                    <ul>
+                        {% for actor in movie.actors.all %}
+                        <li>{{actor.name}} &ndash; {{actor.birth_date|date:"j. n. Y"}}</li>
+                        {% endfor %}
+                    </ul>
+                </li>
+            </ul>
+            <p>{{movie.description}}</p>
+        {% endfor %}
     </div>    
     {% endblock %}
