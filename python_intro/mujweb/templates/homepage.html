@@ -9,7 +9,11 @@
         {% for category in categories %}
             <a href="{% url 'category_detail' category.pk %}" class="btn btn-primary">{{category.title}}</a>
         {% endfor %}
-        <h1>Choose your movie</h1>
+        <h1>{% if active_category == null %}
+            Choose your movie
+            {% else %}
+            {{ active_category }}
+            {% endif %}</h1>
         {% for movie in movies %}
             <h2>{{movie.title}}</h2>
             <ul>

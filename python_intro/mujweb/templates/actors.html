@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>GAFLIX actors</title>
+{% endblock %}
+
+{% block content %}
+<h1>Herci</h1>
+    <div class="container-fluid">
+        {% for actor in actors %}
+            <h2>{% if actor.sex == SEX_MALE %}
+                ♂️
+                {% elif actor.sex == SEX_FEMALE %}
+                ♀
+                {% else %}
+                ⚧️
+                {% endif %}
+                {{actor.name}}</h2>
+            <ul>
+                <li>{{actor.birth_date}}</li>
+            </ul>
+        {% endfor %}
+        
+    </div>    
+    {% endblock %}
