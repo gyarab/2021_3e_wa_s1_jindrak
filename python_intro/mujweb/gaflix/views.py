@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.template import context
-from .models import SEX_MALE, SEX_FEMALE, Movie
+from .models import SEX_MALE, SEX_FEMALE, SEX_OTHER, SEX_CHOICES, Movie
 from .models import Category, Actor
 from django.http import HttpResponseNotFound
 
@@ -18,6 +18,17 @@ def actorlist(request):
         'actors': Actor.objects.all(),
         'SEX_MALE': SEX_MALE,
         'SEX_FEMALE': SEX_FEMALE
+    }
+    return render(request, 'actors.html', context)
+
+def sex_detail(request, sex_id):
+    context = {
+        'movies': Movie.objects.all(),
+        'categories': Category.objects.all(),
+        'actors': Actor.objects.filter(sex=SEX_CHOICES[sex_id][0]),
+        'SEX_MALE': SEX_MALE,
+        'SEX_FEMALE': SEX_FEMALE,
+        'SEX': SEX_CHOICES[sex_id]
     }
     return render(request, 'actors.html', context)
 

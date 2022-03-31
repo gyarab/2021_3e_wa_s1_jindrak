@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from django.views.generic.base import TemplateView
 from django.http import HttpResponse
-from gaflix.views import movielist, category_detail, actorlist
+from gaflix.views import movielist, category_detail, actorlist, sex_detail
 
 def mojeview(request, course_id):
     return HttpResponse("Ahoj")
@@ -27,6 +27,7 @@ urlpatterns = [
     path('', movielist, name='homepage'),
     path('herci', actorlist, name='actorlist'),
     path('kategorie/<int:category_id>', category_detail, name='category_detail'),
+    path('pohlavi/<int:sex_id>', sex_detail, name='sex_detail'),
     path('one', TemplateView.as_view(template_name='one.html'), name='one'),
     path('two', TemplateView.as_view(template_name='two.html'), name='two'),
     path('course/<int:course_id>', mojeview, name='course-detail'),
