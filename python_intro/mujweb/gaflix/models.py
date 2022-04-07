@@ -18,6 +18,8 @@ class Movie(models.Model):
     director = models.ForeignKey('Director', on_delete=models.SET_NULL, null=True)
     actors = models.ManyToManyField('Actor')
     categories = models.ManyToManyField('Category')
+    thumbnail = models.ImageField("Nahled", blank=True, null=True)
+    video_file = models.FileField("Trailer", blank=True, null=True)
     def __str__(self):
         return self.title
 

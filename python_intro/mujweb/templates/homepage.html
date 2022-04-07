@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container-fluid">
+    <div class="container">
         {% for category in categories %}
             <a href="{% url 'category_detail' category.pk %}" class="btn btn-primary">{{category.title}}</a>
         {% endfor %}
@@ -15,7 +15,8 @@
             {{ active_category }}
             {% endif %}</h1>
         {% for movie in movies %}
-            <h2>{{movie.title}}</h2>
+            <h2><a href="{% url "movie_detail" movie.id %}">{{movie.title}}</a></h2>
+            <image src="{{movie.thumbnail}}" width=150>
             <ul>
                 <li>
                     ČSFD: {{movie.rating}}%

@@ -13,11 +13,13 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from django.conf import settings
 from django.contrib import admin
 from django.urls import path
 from django.views.generic.base import TemplateView
 from django.http import HttpResponse
-from gaflix.views import movielist, category_detail, actorlist, sex_detail
+from gaflix.views import movielist, category_detail, actorlist, sex_detail, movie_detail
+# from settings import MEDIA_URL, MEDIA_ROOT
 
 def mojeview(request, course_id):
     return HttpResponse("Ahoj")
@@ -27,8 +29,9 @@ urlpatterns = [
     path('', movielist, name='homepage'),
     path('herci', actorlist, name='actorlist'),
     path('kategorie/<int:category_id>', category_detail, name='category_detail'),
+    path('film/<int:movie_id>', movie_detail, name='movie_detail'),
     path('pohlavi/<int:sex_id>', sex_detail, name='sex_detail'),
     path('one', TemplateView.as_view(template_name='one.html'), name='one'),
     path('two', TemplateView.as_view(template_name='two.html'), name='two'),
     path('course/<int:course_id>', mojeview, name='course-detail'),
-]
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

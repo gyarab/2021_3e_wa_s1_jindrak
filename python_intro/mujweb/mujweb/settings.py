@@ -27,6 +27,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
+MEDIA_ROOT = Path.joinpath(BASE_DIR, "media")
+MEDIA_URL = "/media/"
+
+
 
 # Application definition
 

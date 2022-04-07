@@ -32,6 +32,15 @@ def sex_detail(request, sex_id):
     }
     return render(request, 'actors.html', context)
 
+def movie_detail(request, movie_id):
+    try:
+        context = {
+            'movie': Movie.objects.get(id=movie_id),
+        }
+    except Movie.DoesNotExist:
+        return HttpResponseNotFound("Movie does not exist")
+    return render(request, 'movie.html', context)
+
 def category_detail(request, category_id):
     try:
         active_category = Category.objects.get(id=category_id)
